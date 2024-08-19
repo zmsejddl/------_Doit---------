@@ -1,6 +1,14 @@
 var count = 0;
 var randomNumber = Math.floor(Math.random() * 100) + 1;
 
+document.querySelector("#try").onkeypress = function (e) {
+  if (e.keycode == 13 || e.which == 3) {
+    // 눌린 키가 [Enter]키라면
+    finding(); // finding() 함수 실행
+    return false; // keypress 이벤트가 발생했을 때 브라우저가 기본으로 하는 동작 취소
+  }
+};
+
 function finding() {
   var userNumber = document.querySelector("#try").value;
 
