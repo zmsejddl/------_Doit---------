@@ -24,8 +24,8 @@ function exUnit() {
 
 function converter() {
   if (cTof) {
-    target.value = source.value * 1.8 + 32; // 섭씨 -> 화씨 계산
+    target.value = (source.value * 1.8 + 32).toFixed(2); // 섭씨 -> 화씨 계산
   } else {
-    target.value = (source.value - 32) / 1.8; // 화씨 -> 섭씨 계산
+    target.value = ((source.value - 32) / 1.8).toFixed(2); // 화씨 -> 섭씨 계산
   }
 }
