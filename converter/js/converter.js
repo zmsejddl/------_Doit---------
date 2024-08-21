@@ -21,3 +21,11 @@ function exUnit() {
     tUnit.innerHTML = "&#8457;"; // 오른쪽 단위 필드에 화씨 기호
   }
 }
+
+function converter() {
+  if (cTof) {
+    target.value = source.value * 1.8 + 32; // 섭씨 -> 화씨 계산
+  } else {
+    target.value = (source.value - 32) / 1.8; // 화씨 -> 섭씨 계산
+  }
+}
