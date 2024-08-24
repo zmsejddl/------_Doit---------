@@ -33,3 +33,10 @@ function countTimer() {
     }
   }
 }
+
+function resetTimer() {
+  clearTimer(timer);
+  document.getElementById("display").innerText = ""; // 표시 영역 지움
+  document.getElementById("startMin").value = ""; // '분' 값 지움
+  document.getElementById("startSec").value = ""; // '초' 값 지움
+}
