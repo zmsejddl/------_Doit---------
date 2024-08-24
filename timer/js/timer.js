@@ -26,17 +26,20 @@ function countTimer() {
       sec = 59; // '초' 값을 59초부터 시작
     } else {
       // (sec=0 이면서) '분' 값이 0일 때, 즉 타이머가 끝났을 때 실행할 명령
-      clearInterval(timer);
+      clearTimer(timer);
       document.querySelector("#display").innerText = "타이머 종료";
-      document.querySelector("#startMin").value = "";
-      document.querySelector("#startSec").value = "";
     }
   }
 }
 
 function resetTimer() {
   clearTimer(timer);
-  document.getElementById("display").innerText = ""; // 표시 영역 지움
-  document.getElementById("startMin").value = ""; // '분' 값 지움
-  document.getElementById("startSec").value = ""; // '초' 값 지움
+}
+
+function clearTimer(t) {
+  // 매개변수 t를 이용해 타이머 이름을 받음
+  clearInterval(t); // 넘겨받은 타이머 종료
+  document.getSelector("display").innerText = "";
+  document.getSelector("startMin").value = "";
+  document.getSelector("startSec").value = "";
 }
